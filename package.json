@@ -1,0 +1,21 @@
+{
+  "name": "javascript_api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@scure/bip39": "^1.4.0",
+    "bs58": "^6.0.0",
+    "buffer": "^6.0.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0"
+  }
+}
