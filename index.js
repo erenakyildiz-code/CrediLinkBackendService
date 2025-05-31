@@ -305,7 +305,7 @@ app.listen(PORT, () => {
           ],
     "name": "Example schema", //schema name
     "version": "1.0" //schema version
-  }
+    }
     */
     //first try to find a did with endorser, steward or trustee role.
     //if not found, then throw an error
@@ -622,7 +622,7 @@ return result;
         "attributes": properties.attributes
       },
       "filter": {
-        "indy": {
+        "anoncreds": {
           "cred_def_id": properties.credDefId,
           "schema_id": properties.schemaId,
           "schema_name": schema.schemaName,
@@ -708,7 +708,7 @@ if(invi_msg_id == null) {
     "comment": "string",
     "connection_id": conn.connection_id,
     "presentation_request": {
-        "indy": {
+        "anoncreds": {
             "name": "Proof request",
             "nonce": "1",
             "requested_attributes": properties.attributes,
@@ -740,6 +740,7 @@ if(invi_msg_id == null) {
     throw new Error(`HTTP error! status: ${res.status}`);
   }
   res = await res.json();
+  console.log(res);
   
   return res;
 
@@ -766,6 +767,7 @@ if(invi_msg_id == null) {
         throw new Error(`HTTP error! status: ${presExId.status}`);
       }
       presExId = await presExId.json();
+      console.log(presExId);
       presExId = presExId.results[0].pres_ex_id;
   
       var verifyPresentationHeaders = {
@@ -783,6 +785,7 @@ if(invi_msg_id == null) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       response = await response.json();
+      console.log(response);
       return response;
   
 
